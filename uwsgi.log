@@ -1,0 +1,334 @@
+*** Starting uWSGI 2.0.11.2 (64bit) on [Sun Jul  3 14:34:06 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-4) on 24 October 2015 19:34:43
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/fious/course
+detected binary path: /home/fious/uwsgi/uwsgi
+chdir() to /home/fious/course
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.4.2 (default, Oct 18 2015, 15:32:19)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+Python main interpreter initialized at 0x117d610
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145520 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/fious/course/ to pythonpath.
+added /home/fious/course/course/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x117d610 pid: 5442 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5442)
+spawned uWSGI worker 1 (pid: 5444, cores: 1)
+[pid: 5444|app: 0|req: 1/1] 127.0.0.1 () {38 vars in 648 bytes} [Sun Jul  3 06:39:22 2016] GET / => generated 11199 bytes in 89 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 2/2] 192.168.42.132 () {36 vars in 557 bytes} [Sun Jul  3 06:40:11 2016] GET / => generated 0 bytes in 2 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 3/3] 192.168.42.132 () {36 vars in 582 bytes} [Sun Jul  3 06:40:11 2016] GET /login/?next=/ => generated 3077 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 4/4] 192.168.42.132 () {38 vars in 606 bytes} [Sun Jul  3 06:40:11 2016] GET /favicon.ico => generated 2480 bytes in 10 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 5/5] 192.168.42.132 () {38 vars in 636 bytes} [Sun Jul  3 06:40:11 2016] GET /favicon.ico => generated 2480 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 6/6] 192.168.42.132 () {38 vars in 614 bytes} [Sun Jul  3 06:40:24 2016] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 7/7] 192.168.42.132 () {38 vars in 639 bytes} [Sun Jul  3 06:40:24 2016] GET /login/?next=/ => generated 3077 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 8/8] 127.0.0.1 () {40 vars in 681 bytes} [Sun Jul  3 06:40:28 2016] GET / => generated 11199 bytes in 36 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 9/9] 127.0.0.1 () {40 vars in 681 bytes} [Sun Jul  3 06:40:30 2016] GET / => generated 11199 bytes in 29 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 10/10] 127.0.0.1 () {40 vars in 697 bytes} [Sun Jul  3 06:40:30 2016] GET /teacher/ => generated 2486 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 11/11] 127.0.0.1 () {40 vars in 703 bytes} [Sun Jul  3 06:40:32 2016] GET /logout/ => generated 0 bytes in 21 msecs (HTTP/1.1 302) 4 headers in 209 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 12/12] 127.0.0.1 () {40 vars in 657 bytes} [Sun Jul  3 06:40:32 2016] GET /login/ => generated 3077 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 13/13] 127.0.0.1 () {40 vars in 655 bytes} [Sun Jul  3 06:40:33 2016] GET /login/ => generated 3077 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 14/14] 192.168.42.1 () {38 vars in 624 bytes} [Sun Jul  3 06:41:08 2016] GET / => generated 0 bytes in 2 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 15/15] 192.168.42.1 () {38 vars in 649 bytes} [Sun Jul  3 06:41:08 2016] GET /login/?next=/ => generated 3077 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 16/16] 192.168.42.1 () {38 vars in 646 bytes} [Sun Jul  3 06:41:14 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 17/17] 192.168.42.1 () {38 vars in 646 bytes} [Sun Jul  3 06:41:14 2016] GET /favicon.ico => generated 2480 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 18/18] 192.168.42.132 () {40 vars in 610 bytes} [Sun Jul  3 07:02:51 2016] GET / => generated 0 bytes in 19 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 19/19] 192.168.42.132 () {40 vars in 635 bytes} [Sun Jul  3 07:02:51 2016] GET /login/?next=/ => generated 3077 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 20/20] 127.0.0.1 () {38 vars in 616 bytes} [Sun Jul  3 07:02:55 2016] GET /admin/ => generated 0 bytes in 16 msecs (HTTP/1.1 302) 7 headers in 271 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 21/21] 127.0.0.1 () {38 vars in 653 bytes} [Sun Jul  3 07:02:55 2016] GET /admin/login/?next=/admin/ => generated 1915 bytes in 123 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 22/22] 127.0.0.1 () {44 vars in 826 bytes} [Sun Jul  3 07:02:59 2016] POST /admin/login/?next=/admin/ => generated 0 bytes in 211 msecs (HTTP/1.1 302) 9 headers in 505 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 23/23] 127.0.0.1 () {40 vars in 718 bytes} [Sun Jul  3 07:02:59 2016] GET /admin/ => generated 7759 bytes in 410 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 24/24] 127.0.0.1 () {40 vars in 733 bytes} [Sun Jul  3 07:03:07 2016] GET /admin/selection/course/ => generated 4993 bytes in 188 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 25/25] 127.0.0.1 () {40 vars in 670 bytes} [Sun Jul  3 07:03:07 2016] GET /admin/jsi18n/ => generated 2344 bytes in 284 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 26/26] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:03:09 2016] GET /admin/selection/course/1/ => generated 8977 bytes in 248 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 27/27] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:03:10 2016] GET /admin/jsi18n/ => generated 2344 bytes in 73 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 28/28] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:03:13 2016] GET /admin/selection/course/2/ => generated 8971 bytes in 67 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 29/29] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:03:13 2016] GET /admin/jsi18n/ => generated 2344 bytes in 55 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 30/30] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:03:16 2016] GET /admin/selection/course/3/ => generated 8977 bytes in 82 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 31/31] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:03:17 2016] GET /admin/jsi18n/ => generated 2344 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 32/32] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:03:19 2016] GET /admin/selection/course/4/ => generated 8971 bytes in 89 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 33/33] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:03:20 2016] GET /admin/jsi18n/ => generated 2344 bytes in 18 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 34/34] 127.0.0.1 () {40 vars in 758 bytes} [Sun Jul  3 07:03:24 2016] GET /admin/selection/course/add/ => generated 8769 bytes in 65 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 35/35] 127.0.0.1 () {40 vars in 674 bytes} [Sun Jul  3 07:03:24 2016] GET /admin/jsi18n/ => generated 2344 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 36/36] 127.0.0.1 () {40 vars in 735 bytes} [Sun Jul  3 07:03:31 2016] GET /admin/selection/teacher/ => generated 4583 bytes in 49 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 37/37] 127.0.0.1 () {40 vars in 671 bytes} [Sun Jul  3 07:03:31 2016] GET /admin/jsi18n/ => generated 2344 bytes in 59 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 38/38] 127.0.0.1 () {40 vars in 761 bytes} [Sun Jul  3 07:03:36 2016] GET /admin/selection/teacher/add/ => generated 5942 bytes in 130 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 39/39] 127.0.0.1 () {40 vars in 675 bytes} [Sun Jul  3 07:03:36 2016] GET /admin/jsi18n/ => generated 2344 bytes in 17 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 40/40] 127.0.0.1 () {40 vars in 721 bytes} [Sun Jul  3 07:03:55 2016] GET /admin/ => generated 7759 bytes in 36 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 41/41] 127.0.0.1 () {40 vars in 719 bytes} [Sun Jul  3 07:03:56 2016] GET /admin/auth/user/ => generated 7422 bytes in 179 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 42/42] 127.0.0.1 () {40 vars in 663 bytes} [Sun Jul  3 07:03:57 2016] GET /admin/jsi18n/ => generated 2344 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 43/43] 127.0.0.1 () {40 vars in 737 bytes} [Sun Jul  3 07:04:00 2016] GET /admin/auth/user/add/ => generated 5444 bytes in 93 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 44/44] 127.0.0.1 () {40 vars in 667 bytes} [Sun Jul  3 07:04:00 2016] GET /admin/jsi18n/ => generated 2344 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 45/45] 127.0.0.1 () {44 vars in 956 bytes} [Sun Jul  3 07:04:10 2016] POST /admin/auth/user/add/ => generated 0 bytes in 256 msecs (HTTP/1.1 302) 8 headers in 468 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 46/46] 127.0.0.1 () {40 vars in 910 bytes} [Sun Jul  3 07:04:10 2016] GET /admin/auth/user/4/ => generated 15557 bytes in 123 msecs (HTTP/1.1 200) 8 headers in 418 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 47/47] 127.0.0.1 () {40 vars in 665 bytes} [Sun Jul  3 07:04:11 2016] GET /admin/jsi18n/ => generated 2344 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 48/48] 127.0.0.1 () {44 vars in 960 bytes} [Sun Jul  3 07:05:00 2016] POST /admin/auth/user/4/ => generated 0 bytes in 168 msecs (HTTP/1.1 302) 8 headers in 439 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 49/49] 127.0.0.1 () {40 vars in 877 bytes} [Sun Jul  3 07:05:00 2016] GET /admin/auth/user/ => generated 7983 bytes in 71 msecs (HTTP/1.1 200) 8 headers in 418 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 50/50] 127.0.0.1 () {40 vars in 663 bytes} [Sun Jul  3 07:05:00 2016] GET /admin/jsi18n/ => generated 2344 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 51/51] 127.0.0.1 () {40 vars in 709 bytes} [Sun Jul  3 07:05:04 2016] GET /admin/ => generated 7753 bytes in 46 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 52/52] 127.0.0.1 () {40 vars in 735 bytes} [Sun Jul  3 07:05:05 2016] GET /admin/selection/teacher/ => generated 4583 bytes in 69 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 53/53] 127.0.0.1 () {40 vars in 671 bytes} [Sun Jul  3 07:05:05 2016] GET /admin/jsi18n/ => generated 2344 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 54/54] 127.0.0.1 () {40 vars in 761 bytes} [Sun Jul  3 07:05:07 2016] GET /admin/selection/teacher/add/ => generated 5978 bytes in 59 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 55/55] 127.0.0.1 () {40 vars in 675 bytes} [Sun Jul  3 07:05:07 2016] GET /admin/jsi18n/ => generated 2344 bytes in 44 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 56/56] 127.0.0.1 () {44 vars in 986 bytes} [Sun Jul  3 07:06:55 2016] POST /admin/selection/teacher/add/ => generated 0 bytes in 54 msecs (HTTP/1.1 302) 8 headers in 446 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 57/57] 127.0.0.1 () {40 vars in 902 bytes} [Sun Jul  3 07:06:55 2016] GET /admin/selection/teacher/ => generated 4947 bytes in 52 msecs (HTTP/1.1 200) 8 headers in 418 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 58/58] 127.0.0.1 () {40 vars in 671 bytes} [Sun Jul  3 07:06:55 2016] GET /admin/jsi18n/ => generated 2344 bytes in 14 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 59/59] 127.0.0.1 () {42 vars in 772 bytes} [Sun Jul  3 07:06:59 2016] GET /admin/ => generated 7760 bytes in 52 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 60/60] 127.0.0.1 () {40 vars in 731 bytes} [Sun Jul  3 07:07:00 2016] GET /admin/selection/grade/ => generated 3164 bytes in 55 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 61/61] 127.0.0.1 () {40 vars in 669 bytes} [Sun Jul  3 07:07:00 2016] GET /admin/jsi18n/ => generated 2344 bytes in 13 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 62/62] 127.0.0.1 () {40 vars in 755 bytes} [Sun Jul  3 07:07:02 2016] GET /admin/selection/grade/add/ => generated 5276 bytes in 83 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 63/63] 127.0.0.1 () {40 vars in 673 bytes} [Sun Jul  3 07:07:02 2016] GET /admin/jsi18n/ => generated 2344 bytes in 39 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 64/64] 127.0.0.1 () {44 vars in 974 bytes} [Sun Jul  3 07:07:15 2016] POST /admin/selection/grade/add/ => generated 0 bytes in 121 msecs (HTTP/1.1 302) 8 headers in 437 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 65/65] 127.0.0.1 () {40 vars in 889 bytes} [Sun Jul  3 07:07:15 2016] GET /admin/selection/grade/ => generated 4467 bytes in 66 msecs (HTTP/1.1 200) 8 headers in 418 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 66/66] 127.0.0.1 () {40 vars in 669 bytes} [Sun Jul  3 07:07:15 2016] GET /admin/jsi18n/ => generated 2344 bytes in 11 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 67/67] 127.0.0.1 () {42 vars in 770 bytes} [Sun Jul  3 07:07:20 2016] GET /admin/ => generated 7746 bytes in 67 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 68/68] 127.0.0.1 () {40 vars in 735 bytes} [Sun Jul  3 07:07:22 2016] GET /admin/selection/student/ => generated 4572 bytes in 50 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 69/69] 127.0.0.1 () {40 vars in 671 bytes} [Sun Jul  3 07:07:22 2016] GET /admin/jsi18n/ => generated 2344 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 70/70] 127.0.0.1 () {40 vars in 733 bytes} [Sun Jul  3 07:07:25 2016] GET /admin/selection/course/ => generated 4993 bytes in 54 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 71/71] 127.0.0.1 () {40 vars in 670 bytes} [Sun Jul  3 07:07:25 2016] GET /admin/jsi18n/ => generated 2344 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 72/72] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:07:26 2016] GET /admin/selection/course/1/ => generated 9011 bytes in 60 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 73/73] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:07:26 2016] GET /admin/jsi18n/ => generated 2344 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 74/74] 127.0.0.1 () {40 vars in 754 bytes} [Sun Jul  3 07:09:39 2016] GET /admin/selection/course/2/ => generated 9005 bytes in 72 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5444|app: 0|req: 75/75] 127.0.0.1 () {40 vars in 672 bytes} [Sun Jul  3 07:09:39 2016] GET /admin/jsi18n/ => generated 2344 bytes in 12 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+...brutally killing workers...
+*** Starting uWSGI 2.0.11.2 (64bit) on [Tue Jul  5 16:04:03 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-4) on 24 October 2015 19:34:43
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/fious/course
+detected binary path: /home/fious/uwsgi/uwsgi
+chdir() to /home/fious/course
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.4.2 (default, Oct 18 2015, 15:32:19)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+Python main interpreter initialized at 0x22e3630
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145520 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/fious/course/ to pythonpath.
+added /home/fious/course/course/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x22e3630 pid: 5322 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 5322)
+spawned uWSGI worker 1 (pid: 5324, cores: 1)
+[pid: 5324|app: 0|req: 1/1] 192.168.42.1 () {36 vars in 590 bytes} [Tue Jul  5 08:04:58 2016] GET /favicon.ico => generated 2480 bytes in 217 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 2/2] 192.168.42.1 () {40 vars in 691 bytes} [Tue Jul  5 08:05:28 2016] GET / => generated 0 bytes in 3 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 3/3] 192.168.42.1 () {40 vars in 691 bytes} [Tue Jul  5 08:05:28 2016] GET / => generated 0 bytes in 1 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 4/4] 192.168.42.1 () {40 vars in 716 bytes} [Tue Jul  5 08:05:28 2016] GET /login/?next=/ => generated 3077 bytes in 7 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 5/5] 192.168.42.1 () {40 vars in 716 bytes} [Tue Jul  5 08:05:28 2016] GET /login/?next=/ => generated 3077 bytes in 3 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 6/6] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:37 2016] GET /favicon.ico => generated 2480 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 7/7] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:37 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 8/8] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:46 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 9/9] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:46 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 10/10] 192.168.42.1 () {40 vars in 812 bytes} [Tue Jul  5 08:06:55 2016] GET /admin => generated 0 bytes in 1 msecs (HTTP/1.1 301) 3 headers in 143 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 11/11] 192.168.42.1 () {40 vars in 814 bytes} [Tue Jul  5 08:06:55 2016] GET /admin/ => generated 0 bytes in 12 msecs (HTTP/1.1 302) 7 headers in 276 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 12/12] 192.168.42.1 () {40 vars in 851 bytes} [Tue Jul  5 08:06:55 2016] GET /admin/login/?next=/admin/ => generated 1915 bytes in 298 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 13/13] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:56 2016] GET /favicon.ico => generated 2480 bytes in 5 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 14/14] 192.168.42.1 () {38 vars in 536 bytes} [Tue Jul  5 08:06:56 2016] GET /favicon.ico => generated 2480 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 15/15] 192.168.42.1 () {48 vars in 1059 bytes} [Tue Jul  5 08:07:00 2016] POST /admin/login/?next=/admin/ => generated 0 bytes in 126 msecs (HTTP/1.1 302) 9 headers in 510 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 16/16] 192.168.42.1 () {44 vars in 951 bytes} [Tue Jul  5 08:07:00 2016] GET /admin/ => generated 8172 bytes in 120 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 17/17] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:01 2016] GET /favicon.ico => generated 2480 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 18/18] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:01 2016] GET /favicon.ico => generated 2480 bytes in 3 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 19/19] 192.168.42.1 () {42 vars in 936 bytes} [Tue Jul  5 08:07:09 2016] GET /admin/selection/course/ => generated 5432 bytes in 204 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 20/20] 192.168.42.1 () {42 vars in 822 bytes} [Tue Jul  5 08:07:09 2016] GET /admin/jsi18n/ => generated 2344 bytes in 136 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 21/21] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:10 2016] GET /favicon.ico => generated 2480 bytes in 6 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 22/22] 192.168.42.1 () {42 vars in 919 bytes} [Tue Jul  5 08:07:12 2016] GET /admin/ => generated 8172 bytes in 35 msecs (HTTP/1.1 200) 6 headers in 214 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 23/23] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:12 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 24/24] 192.168.42.1 () {42 vars in 938 bytes} [Tue Jul  5 08:07:17 2016] GET /admin/selection/teacher/ => generated 5021 bytes in 144 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 25/25] 192.168.42.1 () {42 vars in 823 bytes} [Tue Jul  5 08:07:17 2016] GET /admin/jsi18n/ => generated 2344 bytes in 15 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 26/26] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:17 2016] GET /favicon.ico => generated 2480 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 27/27] 192.168.42.1 () {42 vars in 960 bytes} [Tue Jul  5 08:07:20 2016] GET /admin/selection/teacher/2/ => generated 7517 bytes in 119 msecs (HTTP/1.1 200) 7 headers in 336 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 28/28] 192.168.42.1 () {42 vars in 825 bytes} [Tue Jul  5 08:07:21 2016] GET /admin/jsi18n/ => generated 2344 bytes in 10 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 29/29] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:21 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 30/30] 192.168.42.1 () {48 vars in 1185 bytes} [Tue Jul  5 08:07:27 2016] POST /admin/selection/teacher/2/ => generated 0 bytes in 110 msecs (HTTP/1.1 302) 8 headers in 459 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 31/31] 192.168.42.1 () {44 vars in 1141 bytes} [Tue Jul  5 08:07:27 2016] GET /admin/selection/teacher/ => generated 5175 bytes in 63 msecs (HTTP/1.1 200) 8 headers in 418 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 32/32] 192.168.42.1 () {42 vars in 823 bytes} [Tue Jul  5 08:07:27 2016] GET /admin/jsi18n/ => generated 2344 bytes in 16 msecs (HTTP/1.1 200) 3 headers in 93 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 33/33] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:27 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 34/34] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:27 2016] GET /favicon.ico => generated 2480 bytes in 14 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 35/35] 192.168.42.1 () {40 vars in 846 bytes} [Tue Jul  5 08:07:32 2016] GET / => generated 11062 bytes in 79 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 36/36] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:32 2016] GET /favicon.ico => generated 2480 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 37/37] 192.168.42.1 () {42 vars in 900 bytes} [Tue Jul  5 08:07:33 2016] GET /teacher/ => generated 2619 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 38/38] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:34 2016] GET /favicon.ico => generated 2480 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 39/39] 192.168.42.1 () {48 vars in 1077 bytes} [Tue Jul  5 08:07:36 2016] POST /course/student_list/ => generated 2508 bytes in 7 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 40/40] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:37 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 41/41] 192.168.42.1 () {42 vars in 900 bytes} [Tue Jul  5 08:07:41 2016] GET /teacher/ => generated 2619 bytes in 25 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 42/42] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:07:41 2016] GET /favicon.ico => generated 2480 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 43/43] 192.168.42.1 () {40 vars in 862 bytes} [Tue Jul  5 08:08:21 2016] GET /teacher/ => generated 167811 bytes in 568 msecs (HTTP/1.1 500) 3 headers in 106 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 44/44] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:08:22 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 45/45] 192.168.42.1 () {40 vars in 862 bytes} [Tue Jul  5 08:08:55 2016] GET /teacher/ => generated 2612 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 46/46] 192.168.42.1 () {38 vars in 580 bytes} [Tue Jul  5 08:08:55 2016] GET /favicon.ico => generated 2480 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+1
+[pid: 5324|app: 0|req: 47/47] 192.168.42.1 () {48 vars in 1063 bytes} [Tue Jul  5 08:09:00 2016] POST /student_list/ => generated 28 bytes in 43 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 48/48] 192.168.42.1 () {38 vars in 624 bytes} [Tue Jul  5 08:11:03 2016] GET / => generated 0 bytes in 2 msecs (HTTP/1.1 302) 4 headers in 152 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 49/49] 192.168.42.1 () {38 vars in 649 bytes} [Tue Jul  5 08:11:07 2016] GET /login/?next=/ => generated 3077 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 50/50] 192.168.42.1 () {38 vars in 646 bytes} [Tue Jul  5 08:11:18 2016] GET /favicon.ico => generated 2480 bytes in 8 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 51/51] 192.168.42.1 () {38 vars in 646 bytes} [Tue Jul  5 08:11:18 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 52/52] 192.168.42.1 () {44 vars in 815 bytes} [Tue Jul  5 08:11:26 2016] POST /login/?next=/ => generated 0 bytes in 485 msecs (HTTP/1.1 302) 6 headers in 392 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 53/53] 192.168.42.1 () {40 vars in 719 bytes} [Tue Jul  5 08:11:27 2016] GET / => generated 11062 bytes in 162 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 54/54] 192.168.42.1 () {40 vars in 722 bytes} [Tue Jul  5 08:11:30 2016] GET /teacher/ => generated 2612 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+1
+[pid: 5324|app: 0|req: 55/55] 192.168.42.1 () {44 vars in 855 bytes} [Tue Jul  5 08:11:32 2016] POST /student_list/ => generated 28 bytes in 6 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 56/56] 192.168.42.1 () {38 vars in 576 bytes} [Tue Jul  5 08:13:02 2016] GET /teacher/ => generated 1942 bytes in 5 msecs (HTTP/1.1 200) 3 headers in 102 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 57/57] 192.168.42.1 () {40 vars in 605 bytes} [Tue Jul  5 08:13:03 2016] GET /favicon.ico => generated 2480 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 58/58] 192.168.42.1 () {40 vars in 618 bytes} [Tue Jul  5 08:13:06 2016] GET /login/ => generated 3077 bytes in 4 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 59/59] 192.168.42.1 () {40 vars in 605 bytes} [Tue Jul  5 08:13:06 2016] GET /favicon.ico => generated 2480 bytes in 9 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 60/60] 192.168.42.1 () {48 vars in 818 bytes} [Tue Jul  5 08:13:13 2016] POST /login/ => generated 0 bytes in 403 msecs (HTTP/1.1 302) 6 headers in 400 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 61/61] 192.168.42.1 () {44 vars in 751 bytes} [Tue Jul  5 08:13:14 2016] GET /teacher/ => generated 2612 bytes in 13 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 62/62] 192.168.42.1 () {40 vars in 617 bytes} [Tue Jul  5 08:13:14 2016] GET /browserconfig.xml => generated 2498 bytes in 4 msecs (HTTP/1.1 404) 2 headers in 80 bytes (1 switches on core 0)
+1
+[pid: 5324|app: 0|req: 63/63] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 08:13:15 2016] POST /student_list/ => generated 28 bytes in 43 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 64/64] 192.168.42.1 () {40 vars in 677 bytes} [Tue Jul  5 08:19:14 2016] GET /teacher/ => generated 2612 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+1
+[pid: 5324|app: 0|req: 65/65] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 08:19:16 2016] POST /student_list/ => generated 28 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 66/66] 192.168.42.1 () {42 vars in 707 bytes} [Tue Jul  5 08:20:03 2016] GET / => generated 11062 bytes in 2417 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 67/67] 192.168.42.1 () {40 vars in 661 bytes} [Tue Jul  5 08:20:10 2016] GET / => generated 11062 bytes in 24 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 5324|app: 0|req: 68/68] 192.168.42.1 () {42 vars in 715 bytes} [Tue Jul  5 08:20:12 2016] GET /teacher/ => generated 2612 bytes in 14 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+1
+[pid: 5324|app: 0|req: 69/69] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 08:20:13 2016] POST /student_list/ => generated 28 bytes in 125 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+...brutally killing workers...
+worker 1 buried after 1 seconds
+binary reloading uWSGI...
+chdir() to /home/fious/course
+closing all non-uwsgi socket fds > 2 (max_fd = 1024)...
+found fd 3 mapped to socket 0 (127.0.0.1:8001)
+running /home/fious/uwsgi/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.11.2 (64bit) on [Tue Jul  5 08:22:06 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-4) on 24 October 2015 19:34:43
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/fious/course
+detected binary path: /home/fious/uwsgi/uwsgi
+chdir() to /home/fious/course
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited INET address 127.0.0.1:8001 fd 3
+Python version: 3.4.2 (default, Oct 18 2015, 15:32:19)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+Python main interpreter initialized at 0x146f000
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145520 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/fious/course/ to pythonpath.
+added /home/fious/course/course/ to pythonpath.
+*** Starting uWSGI 2.0.11.2 (64bit) on [Tue Jul  5 18:08:05 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-4) on 24 October 2015 19:34:43
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/fious/course
+detected binary path: /home/fious/uwsgi/uwsgi
+chdir() to /home/fious/course
+your processes number limit is 1024
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.4.2 (default, Oct 18 2015, 15:32:19)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+Python main interpreter initialized at 0xb0a630
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145520 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/fious/course/ to pythonpath.
+added /home/fious/course/course/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 4 seconds on interpreter 0xb0a630 pid: 3213 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3213)
+spawned uWSGI worker 1 (pid: 3217, cores: 1)
+[pid: 3217|app: 0|req: 1/1] 192.168.42.1 () {40 vars in 661 bytes} [Tue Jul  5 10:09:46 2016] GET / => generated 11062 bytes in 5164 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3217|app: 0|req: 2/2] 192.168.42.1 () {40 vars in 661 bytes} [Tue Jul  5 10:09:54 2016] GET / => generated 11062 bytes in 22 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3217|app: 0|req: 3/3] 192.168.42.1 () {42 vars in 715 bytes} [Tue Jul  5 10:09:59 2016] GET /teacher/ => generated 2612 bytes in 2261 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3217|app: 0|req: 4/4] 192.168.42.1 () {40 vars in 677 bytes} [Tue Jul  5 10:10:04 2016] GET /teacher/ => generated 2612 bytes in 12 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 5/5] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:10:08 2016] POST /student_list/ => generated 28 bytes in 198 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 6/6] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:10:32 2016] POST /student_list/ => generated 28 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 7/7] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:10:34 2016] POST /student_list/ => generated 28 bytes in 8 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 8/8] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:10:44 2016] POST /student_list/ => generated 28 bytes in 9 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 9/9] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:11:04 2016] POST /student_list/ => generated 28 bytes in 11 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+[pid: 3217|app: 0|req: 10/10] 192.168.42.1 () {42 vars in 723 bytes} [Tue Jul  5 10:11:08 2016] GET /teacher/ => generated 2612 bytes in 44 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+1
+[pid: 3217|app: 0|req: 11/11] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:11:09 2016] POST /student_list/ => generated 28 bytes in 22 msecs (HTTP/1.1 200) 5 headers in 190 bytes (1 switches on core 0)
+Tue Jul  5 10:11:48 2016 - uWSGI worker 1 screams: UAAAAAAH my master disconnected: i will kill myself !!!
+*** Starting uWSGI 2.0.11.2 (64bit) on [Tue Jul  5 18:11:58 2016] ***
+compiled with version: 4.4.7 20120313 (Red Hat 4.4.7-4) on 24 October 2015 19:34:43
+os: Linux-2.6.32-573.22.1.el6.x86_64 #1 SMP Wed Mar 23 03:35:39 UTC 2016
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/fious/course
+detected binary path: /home/fious/uwsgi/uwsgi
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /home/fious/course
+your processes number limit is 7338
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address 127.0.0.1:8001 fd 3
+Python version: 3.4.2 (default, Oct 18 2015, 15:32:19)  [GCC 4.4.7 20120313 (Red Hat 4.4.7-4)]
+Python main interpreter initialized at 0x18a4690
+python threads support enabled
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 145520 bytes (142 KB) for 1 cores
+*** Operational MODE: single process ***
+added /home/fious/course/ to pythonpath.
+added /home/fious/course/course/ to pythonpath.
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x18a4690 pid: 3427 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 3427)
+spawned uWSGI worker 1 (pid: 3429, cores: 1)
+1
+[pid: 3429|app: 0|req: 1/1] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:12:02 2016] POST /student_list/ => generated 28 bytes in 329 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+1
+[pid: 3429|app: 0|req: 2/2] 192.168.42.1 () {48 vars in 878 bytes} [Tue Jul  5 10:12:05 2016] POST /student_list/ => generated 28 bytes in 10 msecs (HTTP/1.1 200) 5 headers in 217 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 3/3] 192.168.42.1 () {42 vars in 707 bytes} [Tue Jul  5 10:14:34 2016] GET / => generated 11062 bytes in 43 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 4/4] 192.168.42.1 () {48 vars in 844 bytes} [Tue Jul  5 10:14:40 2016] POST / => generated 9345 bytes in 622 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 5/5] 192.168.42.1 () {48 vars in 844 bytes} [Tue Jul  5 10:14:43 2016] POST / => generated 9907 bytes in 279 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 6/6] 192.168.42.1 () {48 vars in 844 bytes} [Tue Jul  5 10:14:47 2016] POST / => generated 9987 bytes in 518 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 7/7] 192.168.42.1 () {42 vars in 715 bytes} [Tue Jul  5 10:14:57 2016] GET /teacher/ => generated 2612 bytes in 17 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)
+[pid: 3429|app: 0|req: 8/8] 192.168.42.1 () {42 vars in 707 bytes} [Tue Jul  5 10:14:58 2016] GET / => generated 9915 bytes in 32 msecs (HTTP/1.1 200) 4 headers in 224 bytes (1 switches on core 0)

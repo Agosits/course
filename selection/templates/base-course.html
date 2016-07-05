@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+   <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Course</a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav navbar-left">
+            {% if request.user.is_authenticated %}
+            <li ><a href="{% url 'selection.views.main' %}">Choose</a></li>
+              {% if request.user.teacher  %}
+            <li><a href="{% url 'selection.views.teacher'%}">Teacher</a></li>
+              {% endif %}
+            {% else %}
+            <li><a href="{% url 'selection.views.login_view' %}">login</a></li>
+            {% endif %}
+        </ul>
+        {% if request.user.is_authenticated %}
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{% url 'selection.views.logout_view' %}">logout</a></li>
+        </ul>
+        {% endif %}
+      </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+
+
+
+
+     <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+   
+     <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

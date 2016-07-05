@@ -1,0 +1,45 @@
+{% extends "base-course.html" %}
+{% block title %}signin{% endblock %}
+{% block content %}
+  <body>
+
+    <div class="container">
+      <div class="row">
+      <div class="col-xs-4 col-md-offset-4">
+       <form class="form-signin" method="post">
+       {% csrf_token %}
+        <h2 class="form-signin-heading">Please sign in</h2>
+       
+            <div class="input-group">
+               <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-user"></span>
+                          
+                  </button>
+               </span>
+               <input type="text" class="form-control" name="ID" placeholder="your ID please">
+            </div>
+        
+          <div class="input-group">
+               <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                    <span class="glyphicon glyphicon-lock"></span>
+                  </button>
+               </span>
+               <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password"required>
+            </div>
+        
+        <br>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      {% if err %}
+      <div class="alert alert-danger">ID and password don't match OR ID isn't exist</div>
+      {% endif %}
+      </div>
+      </div>
+    </div> <!-- /container -->
+    
+    
+  </body>
+
+{% endblock %}

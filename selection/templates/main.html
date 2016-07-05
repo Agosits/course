@@ -1,0 +1,166 @@
+{% extends "base-course.html" %}
+{% load filter %}
+{% block title %}selection{% endblock %}
+{% block content %}
+
+<body>
+<div class="container">
+  <div class="row">
+  <div class="col-md-offset-2 col-md-8">
+
+
+    <ul id="myTab" class="nav nav-tabs">
+      {% if not is_delete %}
+      <li class="active">
+        <a href="#home" data-toggle="tab">CHOOSES courses here</a>
+      </li>
+      <li ><a href="#selected" data-toggle="tab">CHECK or DELETE courses you have chosen</a></li>
+      {% else %}
+      <li><a href="#home" data-toggle="tab">CHOOSES courses here</a></li>
+      <li class="active"><a href="#selected" data-toggle="tab">CHECK or DELETE courses you have chosen</a></li>
+      {% endif %}
+      <li><a href="#timetable" data-toggle="tab">Time Table</a></li>
+    </ul>
+
+    <div id="myTabContent" class="tab-content">
+      
+    
+      <div  {% if not is_delete %}
+            class="tab-pane fade in active" 
+             {% else %}
+             class="tab-pane fade in"
+             {% endif %}
+             id="home">
+        <div class="alert alert-info">
+            Courses following are those you can choose,please select courses you want and submit
+          </div>
+        <form role="form" method="post">
+                {% csrf_token %}
+                <table class="table table-bordered">
+                   <h2>courses information</h2>
+                   <thead>
+                      <tr>
+                         <th>Name</th>
+                         <th>Point</th>
+                         <th>SID</th>
+                         <th>Time</th>
+                         <th>Choose</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                    {% for course in course_list %}
+                      <tr>
+                         <td>{{course.name}}</td>
+                         <td>{{course.power}}</td>
+                         <td>{{course.sid}}</td>
+                         <td>{{course.time|time_trans}}</td>
+                         <td>
+                         <div class="checkbox">
+                         <span class="glyphicon glyphicon-plus"></span>
+                           <label>
+
+                              <input type="checkbox" value="1" name="{{course.id}}">{{course.name}}
+                            </label>
+                         </div></td>
+                      </tr>
+                   {% endfor %}
+                   </tbody>
+                </table>
+                <button class="btn btn-primary " type="submit">Submit,you will choose these courses</button> 
+        </form>
+      </div>
+
+      
+      
+      <div {% if is_delete %}
+            class="tab-pane fade in active" 
+            {% else %}
+            class="tab-pane fade in "
+            {% endif %}
+            id="selected">
+        {% if err %}
+        <div class="alert alert-danger">
+          {% for e in err %}
+          {{e}}
+          {% endfor %}
+          Please check and retry
+        </div>
+        {% elif succ %}
+        <div class="alert alert-success">
+          {% for s in succ %}
+          {{s}}
+          {% endfor %}
+          you can check the courses you have chosen here
+        </div>
+        {% else %} 
+        <div class="alert alert-info">
+            There are courses you have alreay chosen,you can delete some of them if you dislike 
+        </div>
+        {% endif %}
+              <form role="form" method="post">
+                {% csrf_token %}
+                <table class="table table-hover">
+                   <h2>selected courses information</h2>
+                   <thead>
+                      <tr>
+                         <th>Name</th>
+                         <th>Point</th>
+                         <th>SID</th>
+                         <th>Grades</th>
+                         <th>Time</th>
+                         <th>Delete</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                    {% for course in cl %}
+                      <tr>
+                         <td>{{course.name}}</td>
+                         <td>{{course.power}}</td>
+                         <td>{{course.sid}}</td>
+                         <td>{{course.grades}}</td>
+                         <td>{{course.time|time_trans}}</td>
+                         <td><div class="checkbox">
+                            <span class="glyphicon glyphicon-trash"></span>
+                           <label><input type="checkbox" value="2" name="{{course.id}}">{{course.name}}</label>
+                         </div></td>
+                      </tr>
+                   {% endfor %}
+                   </tbody>
+                </table>
+                <button class="btn btn-warning " type="submit">Delete selected courses</button>
+                </form>
+      </div>
+
+       <div class="tab-pane fade" id="timetable">
+            <table class="table table-hover table-bordered">
+                   <thead>
+                      <tr>
+                         <th>Time</th>
+                         <th>Mon</th>
+                         <th>Tues</th>
+                         <th>Wed</th>
+                         <th>Thr</th>
+                         <th>Fri</th>
+                      </tr>
+                   </thead>
+                   <tbody>
+                    {% for time in table %}
+                      <tr>
+                         {% for item in time %}
+                         <th>{{item}}</th>
+                         {% endfor %}
+                      </tr>
+                   {% endfor %}
+                   </tbody>
+                </table>
+        </div>
+
+
+    </div>
+
+
+    </div>
+  </div>
+  </div>
+</body>
+{% endblock %}
