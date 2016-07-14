@@ -4,12 +4,19 @@ from django.contrib.auth.models import User
 
 
 class Grade(models.Model):
+    '''
+    年级
+    name为大一、大二或者1、2这样的名称
+    '''
     name = models.CharField(max_length=10)
 
     def __str__(self):
         return self.name
 
 class Major(models.Model):
+    '''
+    专业
+    '''
     name = models.CharField(max_length=100)
 
     def __str__(self):
@@ -17,6 +24,17 @@ class Major(models.Model):
 
 
 class Course(models.Model):
+    '''
+    课程
+    compulsory:是否是选修课，True/False
+    name:名称
+    sid:课程id
+    power:学分
+    time:在课程表上的位置，合法值为1-25
+    classrrom：上课教室
+    content：课程描述
+    '''
+    
     compulsory = models.BooleanField(default='False')
     name = models.CharField(max_length=100)
     sid = models.CharField(max_length=20)
@@ -34,6 +52,12 @@ class Course(models.Model):
 
 
 class Teacher(models.Model):
+    '''
+    教师
+    sid:教师编号
+    name:教师姓名
+    '''
+    
     sid = models.CharField(max_length=20)
     name = models.CharField(max_length=100)
 
@@ -44,6 +68,16 @@ class Teacher(models.Model):
 
 
 class Student(models.Model):
+    '''
+    学生
+    name:学生姓名
+    sid:学号
+    cla:班级
+    timetable:时间表，采用位运算。转化成二进制从低到高第i位上数字为1
+    说明此时间段已经有课
+    
+    '''
+    
     name = models.CharField(max_length=100)
     sid = models.CharField(max_length=12)
     cla = models.CharField(max_length=10)
