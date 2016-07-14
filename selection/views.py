@@ -22,7 +22,6 @@ def login_view(request):
         username = request.POST.get('ID','')
         password = request.POST.get('password','')
         user = auth.authenticate(username=username, password=password)
-        #return HttpResponse(str(username)+str(password))
         if user is not None and user.is_active:
             auth.login(request,user)
             if nexturl:
@@ -80,6 +79,9 @@ def main(request):
         return table
 
     def get_grade():
+        '''
+        目前没用
+        '''
         return 1
         join_year = int(visitor.sid[:4])
         g = int(datetime.date.today[0:4])-join_year
@@ -104,7 +106,7 @@ def main(request):
     err=[]
 
     if request.method == 'POST':
-        is_delete = True
+        is_delete = True#改动过student.courses的标志
         succ = []
         selected = []
         delete = []
@@ -156,7 +158,6 @@ def main(request):
         return render_to_response('main.html',dic,
                                         context_instance=RequestContext(request))
     else:
-        #request.user.sid->grade
         table =  get_timetable()
         dic = {'course_list':course_list,
                 'cl':cl,
@@ -165,7 +166,7 @@ def main(request):
                 }
         return render_to_response('main.html',dic,
                                         context_instance=RequestContext(request))
-#to list:1.#sid->grade 
+
 def teacher(request):
     err = []
     dic = {'err':err}
@@ -196,7 +197,7 @@ def get_student_list(request):
             students = course.student_set.all()
             print (len(students))
             filename = course_sid+'_'+'students.csv'
-            filepath = '/home/fious/data/'
+            filepath = '/tmp/'#临时存放生成的csv的路径
             with open(filepath+filename,'w') as f:
                 writer = csv.writer(f)
                 writer.writerow(('sid','name','class'))
